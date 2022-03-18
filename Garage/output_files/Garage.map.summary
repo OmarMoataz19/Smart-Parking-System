@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Jan 06 23:40:33 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Garage
+Top-level Entity Name : GARAGE
+Family : MAX 10
+Total logic elements : 105
+    Total combinational functions : 103
+    Dedicated logic registers : 34
+Total registers : 34
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

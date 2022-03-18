@@ -1,0 +1,85 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+ENTITY GARAGE IS 
+PORT (CLK,ButtonInput,infraInput: IN std_logic;
+		PWM :OUT STD_LOGIC;
+		LED :OUT STD_LOGIC_VECTOR (13 downto 0));
+END GARAGE;
+
+
+ARCHITECTURE ARCH of GARAGE IS
+	SIGNAL counter : Integer range 0 to 16 :=0;
+	SIGNAL Flag :StD_logic:= '0';
+	SIGNAL Flag2 :StD_logic:= '0';
+	SIGNAL MOTORINP: Std_logic:='0';
+	BEGIN
+	motorFunc: ENTITY work.motorFunc(behave)
+	port map( 
+				CLK => CLK,
+				MOTORINP => MOTORINP,
+				
+				PWM => PWM
+				);
+		--process(infraInput,ButtonInput)
+			--begin
+			--if infraInput = '0' and Flag='1' and counter<16 then
+			--Flag<='0';
+			--MOTORINP<='0';
+			--counter <= counter + 1;
+			--else if ButtonInput='0' then
+			--Flag<='1';
+			--MOTORINP<='1';
+		
+			--end if;	
+			--end if;
+		
+			--end process;
+			process(ButtonInput, infraInput)
+			begin
+			if ButtonInput ='0' and counter<16  then
+					flag<='1';
+			else if buttoninput = '1' and flag = '1' then
+				  motorinp<='1';
+			else if infrainput = '0' and flag ='1' then 
+				flag <='0';
+				counter<= counter +1;
+				flag2<= '1';
+			else if flag='1' and infrainput='1' then
+				flag2<= '0';
+				motorinp<='0';
+			end if;
+			end if;
+			end if;
+			end if;
+			end process;
+			
+--			process(infraInput)
+--			begin
+--			
+--			end process;
+			
+			
+		WITH counter SELECT
+			LED(13 DOWNTO 0)  <=  NOT "01111110111111" when 0,
+										 NOT "01111110000110" when 1,
+										 NOT "01111111011011" when 2,
+										 NOT "01111111001111" when 3,
+										 NOT "01111111100110" when 4,
+										 NOT "01111111101101" when 5,
+										 NOT "01111111111101" when 6,
+										 NOT "01111110000111" when 7,
+										 NOT "01111111111111" when 8,
+										 NOT "01111111101111" when 9,
+										 NOT "00001100111111" when 10,
+										 NOT "00001100000110" when 11,
+										 NOT "00001101011011" when 12,
+										 NOT "00001101001111" when 13,
+										 NOT "00001101100110" when 14,
+										 NOT "00001101101101" when OTHERS;
+				
+				
+END ARCH;
+				
+				

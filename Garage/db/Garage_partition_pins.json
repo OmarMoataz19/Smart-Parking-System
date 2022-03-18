@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PWM",
+					"strict" : false
+				},
+				{
+					"name" : "PWMEX",
+					"strict" : false
+				},
+				{
+					"name" : "RED",
+					"strict" : false
+				},
+				{
+					"name" : "green",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[10]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[12]",
+					"strict" : false
+				},
+				{
+					"name" : "buzz",
+					"strict" : false
+				},
+				{
+					"name" : "smokeInput",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "infraInputEX",
+					"strict" : false
+				},
+				{
+					"name" : "ButtonInputEX",
+					"strict" : false
+				},
+				{
+					"name" : "infraInput",
+					"strict" : false
+				},
+				{
+					"name" : "ButtonInput",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

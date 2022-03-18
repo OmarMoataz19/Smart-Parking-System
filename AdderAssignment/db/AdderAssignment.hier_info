@@ -1,0 +1,69 @@
+|AdderAssignment
+X[0] => FullAdd:stage0.x
+X[1] => FullAdd:stage1.x
+X[2] => FullAdd:stage2.x
+Y[0] => FullAdd:stage0.y
+Y[1] => FullAdd:stage1.y
+Y[2] => FullAdd:stage2.y
+ZClone[0] << FullAdd:stage0.sum
+ZClone[1] << FullAdd:stage1.sum
+ZClone[2] << FullAdd:stage2.sum
+ZClone[3] << FullAdd:stage2.cout
+LED[0] << Mux10.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] << Mux9.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] << Mux8.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+LED[8] << <GND>
+LED[9] << <GND>
+LED[10] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+LED[11] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+LED[12] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+LED[13] << <VCC>
+
+
+|AdderAssignment|FullAdd:stage0
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderAssignment|FullAdd:stage1
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderAssignment|FullAdd:stage2
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
